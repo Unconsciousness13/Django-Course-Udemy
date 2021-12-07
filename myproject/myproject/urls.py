@@ -1,16 +1,11 @@
 from django.contrib import admin
-from django.urls import path
-from django.http import HttpResponse
+from django.urls import path, include
 
-def projects(request):
-    return HttpResponse('Here are our products')
-
-def project(request):
-    return HttpResponse('Single Project')
+from myproject.projects import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('projects/',projects, name="projects"),
-    path('project/',projects, name="single project")
+    path('', include('projects.urls'))
+    
 
 ]
