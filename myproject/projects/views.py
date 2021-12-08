@@ -4,12 +4,8 @@ from django.shortcuts import HttpResponse
 
 
 def projects(request):
-    return HttpResponse('Here are our products')
+    return render(request, 'projects.html')
 
 
-def project(request):
-    return HttpResponse('Single Project')
-
-
-def projectPlus(request, pk):
-    return HttpResponse('Single Project' + ' ' + str(pk))
+def project(request, pk):
+    return HttpResponse('project' + ' ' + str(pk))
