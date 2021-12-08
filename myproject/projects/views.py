@@ -8,4 +8,4 @@ def projects(request):
 
 
 def project(request, pk):
-    return HttpResponse('project' + ' ' + str(pk))
+    return render(request, 'single-project.html')
