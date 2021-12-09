@@ -9,3 +9,5 @@ def projects(request):
 
 def project(request, pk):
     return render(request, 'projects/single-project.html')
+
+## pause
